@@ -1,0 +1,33 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "build"],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@config": ["./src/config/index"],
+      "@assets/*": ["./src/assets/*"],
+      "@interfaces/*": ["./src/typescript/interfaces/*"],
+      "@types/*": ["./src/typescript/types/*"],
+      "@views/*": ["./src/views/*"],
+      "@components/*": ["./src/components/*"],
+      "@router/*": ["./src/router/*"],
+      "@stores": ["./src/stores/index"],
+      "@axios": ["./src/libs/axios"]
+    },
+    "types": ["node"],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "baseUrl": "."
+  }
+}
